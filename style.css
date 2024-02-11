@@ -7,13 +7,14 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   font-family: Arial;
   align-items: center;
   justify-content: center;
 }
 
 .site__title {
-  font-size: 100px;
+  font-size: 6.25rem;
   width: 50%;
   text-align: center;
 }
@@ -26,4 +27,15 @@ body {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.site__secondary_header {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-purple);
+}
+
+.site__paragraph {
+  font-size: 2rem;
+  text-align: left;
 }
