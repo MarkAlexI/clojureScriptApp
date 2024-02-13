@@ -6,7 +6,7 @@
 
 (def body (.querySelector js/document "body"))
 (def heading (gdom/createElement "h2"))
-(gdom/setTextContent heading "Work with html via library 'goog.dom'")
+(gdom/setTextContent heading "Work with html via library Google Closure ('goog.dom')")
 (gdom/appendChild body heading)
 (gc/add heading "site__secondary_header")
 
@@ -15,6 +15,22 @@
 (gdom/setTextContent paragraph "This paragraph is written directly from the source code.")
 (gdom/appendChild body paragraph)
 (gc/add paragraph "site__paragraph")
+
+(defn create-container-with-gdom []
+  (let [container (gdom/createDom "div" #js {:class "container"})]
+    (let [header (gdom/createDom "h2" #js {:class "site__secondary_header" :innerText "ClojureScript is harder then JavaScript"})]
+      (gdom/appendChild container header))
+    (let [paragraph (gdom/createDom "p" #js {:class "site__paragraph" :innerText "Another way to create html with 'goog.dom'."})]
+      (gdom/appendChild container paragraph))
+    (let [link (gdom/createDom "a" #js {:class "external-link" :href "https://www.braveclojure.com/clojure-for-the-brave-and-true/"} "Clojure for brave and true")]
+      (gdom/appendChild container link))
+    container))
+
+(defn add-html! []
+  (let [container (create-container-with-gdom)]
+    (gdom/appendChild (.-body js/document) container)))
+
+(add-html!)
 
 (def hic-container 
   (gdom/createDom "div" #js {:id "hic-container"
