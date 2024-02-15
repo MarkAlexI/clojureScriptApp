@@ -2,19 +2,27 @@
   (:require-macros [hiccups.core :as hiccups])
   (:require [hiccups.runtime]))
 (require '[goog.dom :as gdom])
-(require '[goog.dom.classlist :as gc])
 
 (def body (.querySelector js/document "body"))
+(def div (gdom/createElement "div"))
+(gdom/appendChild body div)
+(gdom/setProperties div #js {"class" "container"})
+
 (def heading (gdom/createElement "h2"))
 (gdom/setTextContent heading "Work with html via library Google Closure ('goog.dom')")
-(gdom/appendChild body heading)
-(gc/add heading "site__secondary_header")
+(gdom/appendChild div heading)
+(gdom/setProperties heading #js {"class" "site__secondary_header"})
 
 (def paragraph
   (gdom/createElement "p"))
 (gdom/setTextContent paragraph "This paragraph is written directly from the source code.")
-(gdom/appendChild body paragraph)
-(gc/add paragraph "site__paragraph")
+(gdom/appendChild div paragraph)
+(gdom/setProperties paragraph #js {"class" "site__paragraph"})
+
+(def link (gdom/createElement "a"))
+(gdom/setTextContent link "Google Closure")
+(gdom/appendChild div link)
+(gdom/setProperties link #js {:class "external-link" :href "https://github.com/google/closure-library"})
 
 (defn create-container-with-gdom []
   (let [container (gdom/createDom "div" #js {:class "container"})]
