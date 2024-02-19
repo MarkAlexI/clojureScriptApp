@@ -36,6 +36,12 @@ body {
   color: var(--color-purple);
 }
 
+.site__small_header {
+  font-size: 2.5rem;
+  text-align: left;
+  color: navy;
+}
+
 .site__paragraph, .external-link {
   font-size: 2rem;
   text-align: left;
@@ -50,11 +56,12 @@ a {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 1rem .5rem 1rem .5rem;
   padding: .8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transition: 0.3s;
 }
 
 .container:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   color: var(--color-dark-grey);
+  background: lightcyan;
 }

@@ -55,7 +55,26 @@
       [:p.site__paragraph "This paragraph is written with render function."]
       [:a {:href "https://github.com/teropa/hiccups"
            :class "external-link"}
-           "Hiccups"])))
+           "Hiccups"]
+
+      [:hr]
+      [:h2.site__secondary_header "Issues"]
+      [:h3.site__small_header "Нотатки на полях проекту"]
+      [:p.site__paragraph "Після завершення великого проекту ("
+        [:a {:href "https://github.com/MarkAlexI/bestOnlineStore"
+           :class "external-link"}
+           "Lykke Store"]
+        "), який був для мене переломним, бо я настільки в backend ще не забирався, закортіло на деякий час переключитися."]
+      [:p.site__paragraph "На очі трапило відео з Олександром Соловйовим "
+        [:a {:href "https://youtu.be/jkaNm97QeLs?si=IzMm-Cw6ExMV5JsT"
+           :class "external-link"}
+           "Functional Reactive Programming & ClojureScript"]
+        ", в якому ведучий дуже шикарно розказав про ClojureScript."]
+
+      [:hr]
+      [:h3.site__small_header "Передумови"]
+      [:p.site__paragraph "JavaScript - класний і потужний."]
+)))
 
 (set! (.. js/document -body -style -backgroundColor) "smokewhite")
 (render-app!)
