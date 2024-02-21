@@ -91,6 +91,14 @@
            :class "external-link"}
            "Codewars"]
         " підтримує Clojure. Ознайомлення продовжується."]
+
+      [:hr]
+      [:h3.site__small_header "Корисні посилання"]
+      [:p.site__paragraph "Ось дещо, відфільтроване."]
+      [:ul
+        [:li "#"]
+        [:li "@"]
+        [:li "$"]]
 )))
 
 (set! (.. js/document -body -style -backgroundColor) "smokewhite")
