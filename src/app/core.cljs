@@ -67,8 +67,8 @@
         "), який був для мене переломним, бо я настільки в backend ще не забирався, закортіло на деякий час переключитися."]
       [:p.site__paragraph "На очі трапило відео з Олександром Соловйовим "
         [:a {:href "https://youtu.be/jkaNm97QeLs?si=IzMm-Cw6ExMV5JsT"
-           :class "external-link"}
-           "Functional Reactive Programming & ClojureScript"]
+             :class "external-link"}
+             "Functional Reactive Programming & ClojureScript"]
         ", в якому ведучий дуже шикарно розказав про ClojureScript."]
 
       [:hr]
@@ -88,17 +88,26 @@
       [:p.site__paragraph "Заплановану ціль не досягнуто. Проект лишиться як є, ознайомчим. Сам процес був цікавим, поступове занурення в Clojure продовжу, але без фанатизму."]
       [:p.site__paragraph "До речі, "
         [:a {:href "https://www.codewars.com/users/MarkAlexI"
-           :class "external-link"}
-           "Codewars"]
+             :class "external-link"}
+             "Codewars"]
         " підтримує Clojure. Ознайомлення продовжується."]
 
       [:hr]
       [:h3.site__small_header "Корисні посилання"]
       [:p.site__paragraph "Ось дещо, відфільтроване."]
       [:ul
-        [:li "#"]
-        [:li "@"]
-        [:li "$"]]
+        [:li
+          [:a {:href "https://ericnormand.me/guide/clojurescript-tutorial"
+               :class "external-link"}
+               "Уроки Clojure"]]
+        [:li
+          [:a {:href "https://www.metosin.fi/blog/frontend-tools"
+               :class "external-link"}
+               "Про все потроху"]]
+        [:li
+          [:a {:href "https://practical.li/clojure/introduction/clojure-in-15-minutes/"
+               :class "external-link"}
+               "Багато теорії"]]]
 )))
 
 (set! (.. js/document -body -style -backgroundColor) "smokewhite")
